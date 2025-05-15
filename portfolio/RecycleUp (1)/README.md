@@ -12,12 +12,12 @@
 
 - [What I learned through building the project](#what-i-learned)
 
-- [Next steps for further development](#next-steps-)
+- [Next steps for further development](#next-steps)
 
 ## Description:
 
 RecycleUp is a platform designed to encourage the next generation to get into recycling in a fun and engaging way. 
-Families, friends, or even school classes can sign up and start tracking their recycling to help take care of our planet!
+Families and friends all over the globe can sign up and start tracking their recycling to help take care of our planet!
 
 ## Why I Built It:
 
@@ -26,7 +26,7 @@ One day I heard something that disappointed me more than shocked me:
 
 So that got me thinking - "how can we encourage the next generation to recycle more?"...By making it **fun**!
 
-And this became the foundation of this project: an engaging platform designed to get the next generation excited
+And this became the foundation of this project - An engaging platform designed to get the next generation excited
 about their recycling efforts through goal setting, progress updates, and a reward system. And to make it even more engaging,
 a little bit of playful competition via an in-house leader board.
 
@@ -34,12 +34,12 @@ a little bit of playful competition via an in-house leader board.
 
 **1. Clone the repository**
 >git clone https://github.com.DiackJ/recycleup-project.git
->
+
+- Navigate to the following package to run the application
 > cd RecycleUp
 
 **2. Set up database**
-- Create MySQL database named *recycleup_db*
-- Run the SQL schema file located in
+- Create a MySQL database named *recycleup_db* using the SQL schema file located in
 >/src/main/resources/schema.sql
 
 **3. Configure application properties**
@@ -54,30 +54,31 @@ a little bit of playful competition via an in-house leader board.
           spring.datasource.password=your_password*
     
           jwt.secret=your_secret_key* (256 bytes or more)
-  - please remove or comment out the following block in 
+    
+  - please remove or comment out the following block to prevent the production database from running
+    - navigate to:
     >/src/main/java/com/RecycleUpApplication.java
   
-      -  **block to comment out:**
+      -  **block to comment out or remove:**
    
               static {
-     
-                  EnvLoader loader = new EnvLoader(); //loads system properties from env at start of application
-    
+                  EnvLoader loader = new EnvLoader(); 
               }
+         
 - **4. Build & Run the application**
-  - run the bash command:
-    > ./mvnw spring-boot:run
+  - run the command:
+    > .\mvnw.cmd spring-boot:run
 
 -**5. Test the API**
 
 -   Use postman or any other API tool to test the endpoints located in
-    > /src/main/java/com.springboot.RecycleUp/Controller.java
+    > /src/main/java/com/Controller.java
     - The base URL is: 
     > http://localhost:8080 
 
 -**6. (Optional) Run tests** 
  - run the bash command:
-    > ./mvnw test
+    > .\mvnw.cmd test
 
 
 ## Stack & Features:
